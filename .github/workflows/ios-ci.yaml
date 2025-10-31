@@ -1,0 +1,112 @@
+name: iOS CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Build and Test iOS App
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Select Xcode version
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.app
+    
+    - name: Cache derived data
+      uses: actions/cache@v3
+      with:
+        path: DerivedData
+        key: derived-data-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          derived-data-
+    
+    - name: Build for testing
+      run: |
+        xcodebuild build-for-testing \
+          -project "FlightLogger.xcodeproj" \
+          -scheme "FlightLogger" \
+          -destination "platform=iOS Simulator,name=iPhone 15,OS=17.0" \
+          -derivedDataPath DerivedData
+      
+    - name: Run unit tests
+      run: |
+        xcodebuild test-without-building \
+          -project "FlightLogger.xcodeproj" \
+          -scheme "FlightLogger" \
+          -destination "platform=iOS Simulator,name=iPhone 15,OS=17.0" \
+          -derivedDataPath DerivedData \
+          -enableCodeCoverage YES \
+          -testPlan "FlightLoggerTests" \
+          -resultBundlePath TestResults/UnitTests
+      
+    - name: Run UI tests
+      run: |
+        xcodebuild test-without-building \
+          -project "FlightLogger.xcodeproj" \
+          -scheme "FlightLogger" \
+          -destination "platform=iOS Simulator,name=iPhone 15,OS=17.0" \
+          -derivedDataPath DerivedData \
+          -testPlan "FlightLoggerUITests" \
+          -resultBundlePath TestResults/UITests
+      
+    - name: Generate code coverage report
+      run: |
+        xcrun xccov view --report --json TestResults/UnitTests.xcresult > coverage.json
+      
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: TestResults/
+        retention-days: 7
+        
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.json
+        flags: unittests
+        name: codecov-umbrella
+
+  static-analysis:
+    name: Static Analysis
+    runs-on: macos-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: SwiftLint Analysis
+      run: |
+        brew install swiftlint
+        swiftlint --strict
+        
+    - name: Run Danger
+      uses: dangers/danger-js@11.1.1
+      with:
+        args: --dangerfile dangerfile.js
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  security-scan:
+    name: Security Scan
+    runs-on: macos-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: MobSF Security Scan
+      uses: actions/checkout@v3
+      
+    - name: Dependency Vulnerability Check
+      run: |
+        echo "Running dependency security checks..."
+        # Add your dependency scanning tool here

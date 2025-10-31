@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "name": "Unit Tests",
+      "options": {
+        "environmentVariableEntries": [
+          {
+            "key": "IS_UNIT_TESTING",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UI Tests", 
+      "options": {
+        "environmentVariableEntries": [
+          {
+            "key": "IS_UI_TESTING",
+            "value": "true"
+          }
+        ]
+      }
+    }
+  ],
+  "defaultOptions": {
+    "codeCoverageEnabled": true
+  },
+  "testTargets": [
+    {
+      "parallelizable": true,
+      "target": {
+        "containerPath": "FlightLogger.xcodeproj",
+        "identifier": "FlightLoggerTests",
+        "name": "FlightLoggerTests"
+      }
+    }
+  ],
+  "version": 1
+}
