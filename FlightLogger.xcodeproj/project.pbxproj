@@ -29,6 +29,23 @@
 		F03701202EB459EB00925789 /* FlightLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F03701462EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FlightLoggerUITestsLaunchTests.swift,
+			);
+			target = F03701152EB459EB00925789 /* FlightLoggerTests */;
+		};
+		F03701472EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FlightLoggerUITestsLaunchTests.swift,
+			);
+			target = F037011F2EB459EB00925789 /* FlightLoggerUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F037010B2EB459EA00925789 /* FlightLogger */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -37,12 +54,26 @@
 		};
 		F03701192EB459EB00925789 /* FlightLoggerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F03701462EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerTests" target */,
+				F03701472EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerUITests" target */,
+			);
 			path = FlightLoggerTests;
 			sourceTree = "<group>";
 		};
 		F03701232EB459EB00925789 /* FlightLoggerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FlightLoggerUITests;
+			sourceTree = "<group>";
+		};
+		F03701452EB56D4B00925789 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F037014A2EB56DC600925789 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,10 +106,12 @@
 		F03701002EB459EA00925789 = {
 			isa = PBXGroup;
 			children = (
+				F037014A2EB56DC600925789 /* Views */,
 				F037010B2EB459EA00925789 /* FlightLogger */,
 				F03701192EB459EB00925789 /* FlightLoggerTests */,
 				F03701232EB459EB00925789 /* FlightLoggerUITests */,
 				F037010A2EB459EA00925789 /* Products */,
+				F03701452EB56D4B00925789 /* Models */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +142,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				F037010B2EB459EA00925789 /* FlightLogger */,
+				F03701452EB56D4B00925789 /* Models */,
+				F037014A2EB56DC600925789 /* Views */,
 			);
 			name = FlightLogger;
 			packageProductDependencies = (
