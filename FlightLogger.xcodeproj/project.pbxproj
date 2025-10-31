@@ -24,56 +24,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F03701092EB459EA00925789 /* FlightLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F03701162EB459EB00925789 /* FlightLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F03701202EB459EB00925789 /* FlightLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03701162EB459EB00925789 /* FlightLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlightLoggerTests.xctest; path = "/Users/sharif/Documents/GitHub/FlightLogger/build/Debug-iphoneos/FlightLogger.app/PlugIns/FlightLoggerTests.xctest"; sourceTree = "<absolute>"; };
+		F03701202EB459EB00925789 /* FlightLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlightLoggerUITests.xctest; path = "/Users/sharif/Documents/GitHub/FlightLogger/build/Debug-iphoneos/FlightLoggerUITests-Runner.app/PlugIns/FlightLoggerUITests.xctest"; sourceTree = "<absolute>"; };
+		F03701652EB5717300925789 /* FlightLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03701672EB571A700925789 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		F03701682EB571B000925789 /* FlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewModel.swift; sourceTree = "<group>"; };
+		F03701692EB571B700925789 /* FlightLoggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLoggerApp.swift; sourceTree = "<group>"; };
+		F037016A2EB571BE00925789 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F03701462EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				FlightLoggerUITestsLaunchTests.swift,
-			);
-			target = F03701152EB459EB00925789 /* FlightLoggerTests */;
-		};
-		F03701472EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				FlightLoggerUITestsLaunchTests.swift,
-			);
-			target = F037011F2EB459EB00925789 /* FlightLoggerUITests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F037010B2EB459EA00925789 /* FlightLogger */ = {
+		F03701662EB5718700925789 /* Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FlightLogger;
-			sourceTree = "<group>";
-		};
-		F03701192EB459EB00925789 /* FlightLoggerTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				F03701462EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerTests" target */,
-				F03701472EB56D5E00925789 /* Exceptions for "FlightLoggerTests" folder in "FlightLoggerUITests" target */,
-			);
-			path = FlightLoggerTests;
-			sourceTree = "<group>";
-		};
-		F03701232EB459EB00925789 /* FlightLoggerUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FlightLoggerUITests;
-			sourceTree = "<group>";
-		};
-		F03701452EB56D4B00925789 /* Models */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F037014A2EB56DC600925789 /* Views */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Views;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -106,23 +69,13 @@
 		F03701002EB459EA00925789 = {
 			isa = PBXGroup;
 			children = (
-				F037014A2EB56DC600925789 /* Views */,
-				F037010B2EB459EA00925789 /* FlightLogger */,
-				F03701192EB459EB00925789 /* FlightLoggerTests */,
-				F03701232EB459EB00925789 /* FlightLoggerUITests */,
-				F037010A2EB459EA00925789 /* Products */,
-				F03701452EB56D4B00925789 /* Models */,
+				F037016A2EB571BE00925789 /* ContentView.swift */,
+				F03701692EB571B700925789 /* FlightLoggerApp.swift */,
+				F03701682EB571B000925789 /* FlightViewModel.swift */,
+				F03701672EB571A700925789 /* Flight.swift */,
+				F03701662EB5718700925789 /* Tests */,
+				F03701652EB5717300925789 /* FlightLogger.app */,
 			);
-			sourceTree = "<group>";
-		};
-		F037010A2EB459EA00925789 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F03701092EB459EA00925789 /* FlightLogger.app */,
-				F03701162EB459EB00925789 /* FlightLoggerTests.xctest */,
-				F03701202EB459EB00925789 /* FlightLoggerUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,16 +93,11 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				F037010B2EB459EA00925789 /* FlightLogger */,
-				F03701452EB56D4B00925789 /* Models */,
-				F037014A2EB56DC600925789 /* Views */,
-			);
 			name = FlightLogger;
 			packageProductDependencies = (
 			);
 			productName = FlightLogger;
-			productReference = F03701092EB459EA00925789 /* FlightLogger.app */;
+			productReference = F03701652EB5717300925789 /* FlightLogger.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F03701152EB459EB00925789 /* FlightLoggerTests */ = {
@@ -164,9 +112,6 @@
 			);
 			dependencies = (
 				F03701182EB459EB00925789 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F03701192EB459EB00925789 /* FlightLoggerTests */,
 			);
 			name = FlightLoggerTests;
 			packageProductDependencies = (
@@ -187,9 +132,6 @@
 			);
 			dependencies = (
 				F03701222EB459EB00925789 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F03701232EB459EB00925789 /* FlightLoggerUITests */,
 			);
 			name = FlightLoggerUITests;
 			packageProductDependencies = (
@@ -231,7 +173,7 @@
 			mainGroup = F03701002EB459EA00925789;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = F037010A2EB459EA00925789 /* Products */;
+			productRefGroup = F03701002EB459EA00925789;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -440,6 +382,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,6 +415,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
