@@ -31,6 +31,7 @@
 		F03701682EB571B000925789 /* FlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewModel.swift; sourceTree = "<group>"; };
 		F03701692EB571B700925789 /* FlightLoggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLoggerApp.swift; sourceTree = "<group>"; };
 		F037016A2EB571BE00925789 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F037016D2EB5722300925789 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 				F03701672EB571A700925789 /* Flight.swift */,
 				F03701662EB5718700925789 /* Tests */,
 				F03701652EB5717300925789 /* FlightLogger.app */,
+				F037016D2EB5722300925789 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
